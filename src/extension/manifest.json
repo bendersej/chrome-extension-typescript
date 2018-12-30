@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome Extension Boilerplate",
+  "short_name": "Chrome Extension Boilerplate",
+  "description": "Chrome Extension with remote script execution",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "permissions": ["activeTab", "storage", "*://*.*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
+}
