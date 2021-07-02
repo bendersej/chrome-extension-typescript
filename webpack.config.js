@@ -3,7 +3,7 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
-const ChromeExtensionReloader = require('webpack-chrome-extension-reloader');
+const ChromeExtensionReloader = require('webpack-extension-reloader');
 
 module.exports = {
   entry: {
@@ -35,6 +35,13 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
+    new ChromeExtensionReloader({
+      port: 9090,
+      entries: {
+        ContentScript: 'content-script',
+        background: 'background',
+      },
+    }),
     new CopyWebpackPlugin([
       {
         from: 'src/extension/manifest.json',
@@ -48,14 +55,6 @@ module.exports = {
         // },
       },
     ]),
-    new ChromeExtensionReloader({
-      port: 9090,
-      reloadPage: true,
-      entries: {
-        ContentScript: 'content-script',
-        background: 'background',
-      },
-    }),
     new AssetsPlugin({
       filename: '/dist/assets-manifest.json',
       prettyPrint: true,

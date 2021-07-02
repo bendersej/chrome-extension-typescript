@@ -3,5 +3,3 @@ console.log(
   'color: #0095ff',
   chrome.storage,
 );
-
-console.log('Cookies!', document.cookie);
