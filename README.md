@@ -35,4 +35,10 @@ yarn run dev:client
 yarn run dev:server
 ```
 3. Load the extension via Chrome extensions (Load unpacked extension) and select the `extension` folder in `dist/extension`
-```
+
+
+## Contributing: known issues / possible improvements
+- Updating the code in the `/client` directory requires a manual page reload (the extension reloader only picks up changes directly related to the extension directory).
+
+_I believe that earlier versions of this boilerplate nicely handled that, but I have not verified nor looked into fixing it as I am not actively developping / working on extensions at this point in time._
+- `yarn build` is currently a TODO, only the dev setup is up and running
