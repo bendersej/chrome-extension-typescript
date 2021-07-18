@@ -3,7 +3,7 @@ I found myself writing the same code over and over again when bootstraping a new
 
 I wanted to:
 - Be able to publish my extension once on the store and remote update it.
-- A good development experience: thanks to the awesome [webpack-chrome-extension-reloader](https://github.com/rubenspgcavalcante/webpack-chrome-extension-reloader), any changes in the client code triggers a page refresh and reload the code automagically.
+- A good development experience: thanks to the awesome [webpack-extension-reloader](https://github.com/rubenspgcavalcante/webpack-extension-reloader), any changes in the client code triggers a page refresh and reload the code automagically.
 - A tight TypeScript integration
 
 This boilerplate allows you to quickly get started with the following:

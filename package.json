@@ -20,10 +20,10 @@
     "koa-static": "^5.0.0"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.91",
+    "@types/chrome": "^0.0.145",
     "@types/koa": "^2.11.0",
     "@types/koa-bodyparser": "^4.3.0",
-    "@types/koa-helmet": "^3.1.2",
+    "@types/koa-helmet": "^6.0.3",
     "@types/koa-logger": "^3.1.1",
     "@types/koa-router": "^7.4.0",
     "@types/koa-static": "^4.0.1",

@@ -12,12 +12,7 @@ module.exports = {
     background: './src/extension/background.ts',
   },
   output: {
-    filename: (chunkData) => {
-      if (chunkData.chunk.name.includes(process.env.APP_DIST_LOCATION)) {
-        return '[name].[hash].js';
-      }
-      return '[name].js';
-    },
+    // filename: (_chunkData) => '[name].js',
     path: path.resolve(__dirname, 'dist/extension'),
   },
   mode: 'development',
